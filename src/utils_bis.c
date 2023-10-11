@@ -55,3 +55,10 @@ int	p_error(void)
 	return (ERROR);
 }
 
+void error_exit(t_pushswap *ps)
+{
+	p_error();
+	free_structure(ps);
+	exit (0);
+}
+

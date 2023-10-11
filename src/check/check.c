@@ -21,6 +21,8 @@ int	check_if_number_str(char *str)
 		return (0);
 	if (str[i] == '-' || str[i] == '+')
 		i++;
+	if (str[i] == '\0') // new
+		return(0);
 	while (str[i] != '\0')
 	{
 		if ((str[i] >= '0' && str[i] <= '9'))
@@ -31,7 +33,7 @@ int	check_if_number_str(char *str)
 	return (1);
 }
 
-int	count_words(char const *s, char c)
+int count_words(char const *s, char c, char tab)
 {
 	int	i;
 	int	count;
@@ -40,12 +42,12 @@ int	count_words(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		while (s[i] == c)
+		while (s[i] == c || s[i] == tab)
 			i++;
 		if (s[i] && s[i] != c)
 		{
 			count++;
-			while (s[i] != c && s[i])
+			while (s[i] != c && s[i] && s[i] != tab)
 				i++;
 		}
 	}
@@ -57,14 +59,14 @@ void	check_all_arg(char **av, int ac, t_pushswap *ps)
 	if (ac == 2)
 	{
 		ps->mono_arg = check_mono_arg(av, ps);
-		if (ps->mono_arg == 0)
+		if (ps->mono_arg == ERROR_NO_NUMBER) // 0
+			error_exit(ps);
+		if (ps->mono_arg == 2)
 		{
-			free_structure(ps);
-			p_error();
+			if ((check_int_limit(ft_atol(av[1]))) == ERROR)
+				p_error();
 			exit (0);
 		}
-		if (ps->mono_arg == 2)
-			exit (0);
 	}
 	else if (ac > 2)
 	{
@@ -82,8 +84,8 @@ int	check_mono_arg(char **av, t_pushswap *ps)
 	int	i;
 
 	i = 0;
-	ps->number_numbers = count_words(av[1], ' ');
-	if (ps->number_numbers == 1)
+	ps->number_numbers = count_words(av[1], ' ', '\t');
+	if (ps->number_numbers == 1 && check_if_number_str(av[1]))// test sur que c'est que un nombre
 		return (2);
 	ps->tab_args_number = ft_split(av[1], ' ');
 	while (i < ps->number_numbers)

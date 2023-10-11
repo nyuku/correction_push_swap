@@ -36,7 +36,7 @@ int	check_double(t_node *head)
 
 int	check_int_limit(long l)
 {
-	if (l <= INT_MIN || l >= INT_MAX)
+	if (l < INT_MIN || l > INT_MAX) // change >=
 		return (ERROR);
 	return (SUCCESS);//change
 }

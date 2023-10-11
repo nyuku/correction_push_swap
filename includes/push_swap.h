@@ -24,6 +24,7 @@
 
 # define ERROR      0
 # define SUCCESS    1
+# define ERROR_NO_NUMBER      0
 
 /*◇───────────────────────────────────────────────────────────────◇*\
 * 	structure
@@ -137,4 +138,5 @@ int is_in_upper_half(t_node *head, int index_position);// retourn 1 si en haut, 
 int get_max_index(t_node *head);
 
 void deal_with_args(t_pushswap *ps, char **av);
+void error_exit(t_pushswap *ps);
 #endif

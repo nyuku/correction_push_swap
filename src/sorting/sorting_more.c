@@ -47,7 +47,7 @@ void	push_b_chunks(t_pushswap *ps, int chunks, int round)
 			(ps->head_a->index >= (limit - (chunks - 1))))
 		{
 			push(&(ps->head_a), &(ps->head_b), ps, 'b');
-			if ((list_size(ps->head_b) >= 2) && (ps->head_b->index > border))
+			if ((list_size(ps->head_b) >= 2) && (ps->head_b->index > border)) //
 			{
 				rotate_up(&(ps->head_b), ps, 'b');
 			}

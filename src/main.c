@@ -82,7 +82,8 @@ static	void	check_args_parsed(t_pushswap *ps)
 int	main(int ac, char **av)
 {
 	t_pushswap	ps;
-
+	if (ac == 1)
+		return(0);
 	init_main(&ps, ac);
 	check_all_arg(av, ac, &ps);
 	deal_with_args(&ps, av);
@@ -91,7 +92,7 @@ int	main(int ac, char **av)
 		big_sort(&ps);
 	else
 		small_sorting(&ps);
-//	printf("nombre de chiffre %d\n", list_size((ps.head_a)));
+
 //	print_nodes(&(ps.head_a), 'A');
 //	printf("\n\n----------------------\n\n");
 
