@@ -1,0 +1,53 @@
+diff --git a/src/main.c b/src/main.c
+index ec7156b..52ba63f 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -76,7 +76,7 @@ static	void	check_args_parsed(t_pushswap *ps)
+ 		free_structure(ps);
+ 		exit(0);
+ 	}
+-	ps->head_b = node_init();
++	ps->head_b = NULL;
+ }
+ 
+ int	main(int ac, char **av)
+diff --git a/src/sorting/sorting_more.c b/src/sorting/sorting_more.c
+index 4b2c907..de05b5e 100644
+--- a/src/sorting/sorting_more.c
++++ b/src/sorting/sorting_more.c
+@@ -63,15 +63,26 @@ void	b_to_a(t_pushswap *ps)
+ 	int	max_index;
+ 	int	upper;
+ 	int	index_position;
+-
++//	t_pushswap *tmp;
+ 	upper = 0;
+-	while (list_size(ps->head_b) > 1) // change != 0
++
++//0	tmp = ps;
++//	while (tmp->head_b)
++//	{
++//		ft_printf("IndexB: %d\n", tmp->head_b->index);
++//		tmp->head_b = tmp->head_b->next;
++//	}
++
++	while (list_size(ps->head_b) > 0) // change != 0
+ 	{
+ 		max_index = get_max_index(ps->head_b);
+ 		index_position = find_index(ps->head_b, max_index);
++		ft_printf("Index pos: %d\n", index_position);
+ 		upper = is_in_upper_half(ps->head_b, index_position);
++//		ft_printf("head_index: %d\n", ps->head_b->index);
+ 		while (ps->head_b->index != max_index)
+ 		{
++//			ft_printf("head_index: %d\n", ps->head_b->index);
+ 			if (upper == 1)
+ 				rotate_up(&(ps->head_b), ps, 'b');
+ 			else if (upper == 0)
+@@ -112,5 +123,6 @@ int	get_max_index(t_node *head)
+ 			max_index = current->index;
+ 		current = current->next;
+ 	}
++	ft_printf("Max: %d\n", max_index);
+ 	return (max_index);
+ }

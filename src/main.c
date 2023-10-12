@@ -76,7 +76,7 @@ static	void	check_args_parsed(t_pushswap *ps)
 		free_structure(ps);
 		exit(0);
 	}
-	ps->head_b = node_init();
+	ps->head_b = NULL;
 }
 
 int	main(int ac, char **av)
@@ -93,12 +93,8 @@ int	main(int ac, char **av)
 	else
 		small_sorting(&ps);
 
-//	print_nodes(&(ps.head_a), 'A');
-//	printf("\n\n----------------------\n\n");
-
 	free_nodes(&(ps.head_a));
 	free_nodes(&(ps.head_b));
-//	print_nodes(&(ps.head_b), 'B');
 	free_structure(&ps);
 	return (0);
 }

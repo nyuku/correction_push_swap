@@ -63,9 +63,17 @@ void	b_to_a(t_pushswap *ps)
 	int	max_index;
 	int	upper;
 	int	index_position;
-
+//	t_pushswap *tmp;
 	upper = 0;
-	while (list_size(ps->head_b) > 1) // change != 0
+
+//0	tmp = ps;
+//	while (tmp->head_b)
+//	{
+//		ft_printf("IndexB: %d\n", tmp->head_b->index);
+//		tmp->head_b = tmp->head_b->next;
+//	}
+
+	while (list_size(ps->head_b) > 0) // change != 0
 	{
 		max_index = get_max_index(ps->head_b);
 		index_position = find_index(ps->head_b, max_index);
