@@ -12,22 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-//void	ft_free_double_str(char **str)
-//{
-//	int	i;
-//
-//	if (*str != NULL)
-//	{
-//		i = 0;
-//		while (str[i])
-//		{
-//			free(str[i]);
-//			i++;
-//		}
-//		free(str);
-//	}
-//}
-
 int	find_index(t_node *head, int target_index)
 {
 	int		i;
@@ -77,7 +61,6 @@ int	list_size(t_node *node)
 	int	i;
 
 	i = 0;
-
 	while (node != NULL)
 	{
 		i++;
@@ -85,4 +68,3 @@ int	list_size(t_node *node)
 	}
 	return (i);
 }
-

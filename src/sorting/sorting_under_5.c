@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_under_5.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angela <angela@student.42.fr>              +#+  +:+       +#+        */
+/*   By: angnguye <angnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:24:36 by angela            #+#    #+#             */
-/*   Updated: 2023/09/04 11:01:00 by angela           ###   ########.fr       */
+/*   Updated: 2023/10/13 00:41:27 by angnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void	duo(t_pushswap *ps)
 
 static void	threesome_bis(t_pushswap *ps, int sorting_for)
 {
-	if (ps->head_a->index == (2 + sorting_for) && ps->head_a->next->index == (3 + sorting_for) && ps->head_a->next->next->index == (1 + sorting_for))
+	if (ps->head_a->index == (2 + sorting_for) && ps->head_a->next->index == \
+	(3 + sorting_for) && ps->head_a->next->next->index == (1 + sorting_for))
 		reverse_rotate(&(ps->head_a), ps, 'a');
 }
 
@@ -69,7 +70,7 @@ void	sorting_for(t_pushswap *ps, int five_sort)
 	t_node	*prout;
 
 	prout = last_node(ps->head_a);
-	if (prout->index == 1) // possible de faire list size - (list size-1)
+	if (prout->index == 1)
 		reverse_rotate(&(ps->head_a), ps, 'a');
 	else
 	{
@@ -78,6 +79,6 @@ void	sorting_for(t_pushswap *ps, int five_sort)
 			rotate_up(&ps->head_a, ps, 'a');
 	}
 	push(&(ps->head_a), &(ps->head_b), ps, 'b');
-	threesome(ps, 2);// changer en 2 au lieu de 1
+	threesome(ps, 2);
 	push(&(ps->head_b), &(ps->head_a), ps, 'a');
 }

@@ -21,7 +21,6 @@ t_node	*last_node(t_node *head)
 	return (head);
 }
 
-
 long	ft_atol(char *nptr)
 {
 	long	i;
@@ -55,10 +54,31 @@ int	p_error(void)
 	return (ERROR);
 }
 
-void error_exit(t_pushswap *ps)
+void	error_exit(t_pushswap *ps)
 {
 	p_error();
 	free_structure(ps);
 	exit (0);
+}
+
+int	count_words(char const *s, char c, char tab)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		while (s[i] == c || s[i] == tab)
+			i++;
+		if (s[i] && s[i] != c)
+		{
+			count++;
+			while (s[i] != c && s[i] && s[i] != tab)
+				i++;
+		}
+	}
+	return (count);
 }
 

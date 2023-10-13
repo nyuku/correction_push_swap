@@ -3,20 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angela <angela@student.42.fr>              +#+  +:+       +#+        */
+/*   By: angnguye <angnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 22:19:08 by angela            #+#    #+#             */
-/*   Updated: 2023/10/08 12:59:07 by angela           ###   ########.fr       */
+/*   Updated: 2023/10/13 00:30:36 by angnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void print_nodes(t_node **node, char c) {
-	t_node* current = *node;
+void	print_nodes(t_node **node, char c)
+{
+	t_node	*current;
 
-	printf("Contenu de la liste %c: ", c);
-	while (current != NULL) {
+	current = *node;
+	ft_printf("Contenu de la liste %c: ", c);
+	while (current != NULL)
+	{
 		printf("%d ", current->data);
 		current = current->next;
 	}
@@ -82,8 +85,9 @@ static	void	check_args_parsed(t_pushswap *ps)
 int	main(int ac, char **av)
 {
 	t_pushswap	ps;
+
 	if (ac == 1)
-		return(0);
+		return (0);
 	init_main(&ps, ac);
 	check_all_arg(av, ac, &ps);
 	deal_with_args(&ps, av);
@@ -92,7 +96,6 @@ int	main(int ac, char **av)
 		big_sort(&ps);
 	else
 		small_sorting(&ps);
-
 	free_nodes(&(ps.head_a));
 	free_nodes(&(ps.head_b));
 	free_structure(&ps);

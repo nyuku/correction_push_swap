@@ -18,8 +18,6 @@
 # include <stddef.h>
 # include <stdarg.h>
 # include <limits.h>
-
-
 /*
  * s_c_p_d_i.c
  */

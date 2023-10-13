@@ -3,32 +3,32 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: angela <angela@student.42.fr>              +#+  +:+       +#+         #
+#    By: angnguye <angnguye@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/24 22:57:11 by angela            #+#    #+#              #
-#    Updated: 2023/10/05 17:26:25 by angela           ###   ########.fr        #
+#    Updated: 2023/10/13 00:35:11 by angnguye         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ---------------- Nickname --------------
-NAME			= push_swap
-RM				= rm -f
-CC				= gcc
+NAME			=	push_swap
+RM				=	rm -f
+CC				=	gcc
 
 # ---------------- Color --------------
-GREEN			=		\033[1;32m
-DARKGRAY		=		\033[1;30m
-LIGHTGRAY		=		\033[1;37m
-PURPLE			=		\033[0;35m
-LIGHTPURPLE		=		\033[1;35m
-LIGHTCYAN		=		\033[1;36m
-LILAC			= 		\033[0;94m    
-ENDCOLOR		=		\033[0m
+GREEN			=	\033[1;32m
+DARKGRAY		=	\033[1;30m
+LIGHTGRAY		=	\033[1;37m
+PURPLE			=	\033[0;35m
+LIGHTPURPLE		=	\033[1;35m
+LIGHTCYAN		=	\033[1;36m
+LILAC			= 	\033[0;94m    
+ENDCOLOR		=	\033[0m
 
 # ---------------- FLAGS --------------
-CFLAGS			= -Wall -Wextra -Werror 
-NUMTEST			= "4 1 3 5"
-DEBUG			= -fsanitize=address -g3
+CFLAGS			=	-Wall -Wextra -Werror 
+NUMTEST			=	"4 1 3 5"
+DEBUG			=	-fsanitize=address -g3
 
 # ---------------- Sources -----------
 SRC				=	./src/main.c \
@@ -49,36 +49,25 @@ SRC				=	./src/main.c \
 					./src/sorting/sorting_under_5_bis.c \
 					./src/sorting/sorting_more.c \
 					./src/sorting/index.c
-					
-
-					
-				 
-LIB				= ./includes/push_swap.h
+				
+LIB				=	./includes/push_swap.h
 			
-
 # ---------------- Objets -----------
-OBJS			= ${SRC:.c=.o}
-
+OBJS			=	${SRC:.c=.o}
 
 # --------------- LIBFT --------------------
-
-LIBFT			=		./libft/libft.a
-MLIBFT			=		@$(MAKE) -C libft
-
-#lib:
-#			@$(MLIBFT) all
-#			@$(END_COMP_LIB_TXT)
+LIBFT			=	./libft/libft.a
+MLIBFT			=	@$(MAKE) -C libft
 
 # --------------- Regles --------------------
-
 all:			${NAME} lib
 
 lib:
-			@$(MLIBFT)
+				@$(MLIBFT)
 			
-%.o:		%.c ./libft/libft.h Makefile
-			@$(CC) $(CFLAGS) -c $< -o $@
-			@$(CHARG_LINE_TXT)
+%.o:			%.c ./libft/libft.h Makefile
+				@$(CC) $(CFLAGS) -c $< -o $@
+				@$(CHARG_LINE_TXT)
 
 ${NAME}:		${OBJS}
 				@make -C libft
@@ -100,10 +89,6 @@ start_msg:
 				@$(BS_TXT)
 				@tput setaf 92; cat ascii_art/cat_make; tput setaf 7
 				@$(BS_TXT)
-
-
-
-
 
 # --------------- Service nettoyage --------------------
 clean:

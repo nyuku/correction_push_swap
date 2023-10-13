@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angela <angela@student.42.fr>              +#+  +:+       +#+        */
+/*   By: angnguye <angnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 22:18:53 by angela            #+#    #+#             */
-/*   Updated: 2023/10/06 14:33:34 by angela           ###   ########.fr       */
+/*   Updated: 2023/10/13 00:42:06 by angnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ int	fill_list_multi(t_pushswap *ps, char **av)
 	t_node	*current_node_a;
 	int		i;
 	long	nb;
-	nb = 0;
 
+	nb = 0;
 	i = 1;
 	current_node_a = ps->head_a;
-	while (current_node_a != NULL && i <= ps->number_numbers)//(current_node_a != NULL && i <= ps->number_numbers)
+	while (current_node_a != NULL && i <= ps->number_numbers)
 	{
 		nb = ft_atol(av[i]);
 		if (check_int_limit(nb) == ERROR)

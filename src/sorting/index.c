@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angela <angela@student.42.fr>              +#+  +:+       +#+        */
+/*   By: angnguye <angnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 19:21:27 by angela            #+#    #+#             */
-/*   Updated: 2023/09/03 17:43:56 by angela           ###   ########.fr       */
+/*   Updated: 2023/10/13 00:36:39 by angnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	index_node(t_pushswap *ps)
 	find_biggest(ps);
 	ps->biggest->index = i;
 	i--;
-	while (i >= 1) // change patate
+	while (i >= 1)
 	{
 		temp = ps->head_a;
 		temp_big = NULL;

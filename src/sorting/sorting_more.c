@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorting_more.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angela <angela@student.42.fr>              +#+  +:+       +#+        */
+/*   By: angnguye <angnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 00:09:12 by angela            #+#    #+#             */
-/*   Updated: 2023/09/03 17:43:51 by angela           ###   ########.fr       */
+/*   Updated: 2023/10/13 00:39:32 by angnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	big_sort(t_pushswap *ps)
 	int	chunk;
 
 	chunk_done = 1;
-	if (list_size((ps->head_a)) <= 100) // chnage ps->head_a)
+	if (list_size((ps->head_a)) <= 100)
 		chunk = 20;
 	else
 		chunk = 70;
@@ -47,7 +47,7 @@ void	push_b_chunks(t_pushswap *ps, int chunks, int round)
 			(ps->head_a->index >= (limit - (chunks - 1))))
 		{
 			push(&(ps->head_a), &(ps->head_b), ps, 'b');
-			if ((list_size(ps->head_b) >= 2) && (ps->head_b->index > border)) //
+			if ((list_size(ps->head_b) >= 2) && (ps->head_b->index > border))
 			{
 				rotate_up(&(ps->head_b), ps, 'b');
 			}
@@ -63,17 +63,9 @@ void	b_to_a(t_pushswap *ps)
 	int	max_index;
 	int	upper;
 	int	index_position;
-//	t_pushswap *tmp;
+
 	upper = 0;
-
-//0	tmp = ps;
-//	while (tmp->head_b)
-//	{
-//		ft_printf("IndexB: %d\n", tmp->head_b->index);
-//		tmp->head_b = tmp->head_b->next;
-//	}
-
-	while (list_size(ps->head_b) > 0) // change != 0
+	while (list_size(ps->head_b) > 0)
 	{
 		max_index = get_max_index(ps->head_b);
 		index_position = find_index(ps->head_b, max_index);
@@ -89,7 +81,6 @@ void	b_to_a(t_pushswap *ps)
 		push(&(ps->head_b), &(ps->head_a), ps, 'a');
 	}
 }
-
 
 int	get_min_index(t_node *head)
 {
