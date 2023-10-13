@@ -22,7 +22,7 @@ void	sorting_five(t_pushswap *ps)
 	else if (ps->head_a->index != 1)
 	{
 		while (ps->head_a->index != 1)
-			rotate_up(&ps->head_a, ps, 'a');
+			rotate(&ps->head_a, ps, 'a');
 	}
 	push(&(ps->head_a), &(ps->head_b), ps, 'b');
 	sorting_for(ps, 1);

@@ -49,12 +49,12 @@ void	push_b_chunks(t_pushswap *ps, int chunks, int round)
 			push(&(ps->head_a), &(ps->head_b), ps, 'b');
 			if ((list_size(ps->head_b) >= 2) && (ps->head_b->index > border))
 			{
-				rotate_up(&(ps->head_b), ps, 'b');
+				rotate(&(ps->head_b), ps, 'b');
 			}
 			i++;
 		}
 		else
-			rotate_up(&(ps->head_a), ps, 'a');
+			rotate(&(ps->head_a), ps, 'a');
 	}
 }
 
@@ -73,7 +73,7 @@ void	b_to_a(t_pushswap *ps)
 		while (ps->head_b->index != max_index)
 		{
 			if (upper == 1)
-				rotate_up(&(ps->head_b), ps, 'b');
+				rotate(&(ps->head_b), ps, 'b');
 			else if (upper == 0)
 				reverse_rotate(&(ps->head_b), ps, 'b');
 		}

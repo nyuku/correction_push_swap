@@ -12,7 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
-void	rotate_up(t_node **head, t_pushswap *ps, char stack_c)
+void	rotate(t_node **head, t_pushswap *ps, char stack_c)
 {
 	t_node	*node_1;
 	t_node	*end;
@@ -28,6 +28,6 @@ void	rotate_up(t_node **head, t_pushswap *ps, char stack_c)
 
 void	double_rotate(t_node **node_a, t_node **node_b, t_pushswap *ps)
 {
-	rotate_up(node_a, ps, 'a');
-	rotate_up(node_b, ps, 'b');
+	rotate(node_a, ps, 'a');
+	rotate(node_b, ps, 'b');
 }

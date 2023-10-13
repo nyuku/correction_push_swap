@@ -49,6 +49,7 @@ SRC				=	./src/main.c \
 					./src/sorting/sorting_under_5_bis.c \
 					./src/sorting/sorting_more.c \
 					./src/sorting/index.c
+
 				
 LIB				=	./includes/push_swap.h
 			
@@ -97,7 +98,7 @@ clean:
 
 fclean:			clean
 				@${RM} ${NAME}
-				@echo "$(GREEN)Cleaning succes🌸$(ENDCOLOR)"
+				@echo "$(GREEN)Cleaning success🌸$(ENDCOLOR)"
 
 re:				fclean all clean
 				@tput setaf 183; cat ascii_art/cat; tput setaf 7

@@ -1,9 +1,9 @@
 # ninja log v5
 3362	3697	1696853747563582095	CMakeFiles/push_swap.dir/libft/ft_strrchr.c.o	5980f079fd0ec5a1
-2594	3101	1696853746960387923	CMakeFiles/push_swap.dir/libft/ft_split.c.o	10a4e0abe86748e
 2682	3095	1696853746959186904	CMakeFiles/push_swap.dir/libft/ft_striteri.c.o	14e37686f2124d5b
 7	716	1696853744483153968	CMakeFiles/push_swap.dir/src/ft_printf/u_x_X.c.o	c71530f2e7233ab9
 3096	3417	1696853747283490406	CMakeFiles/push_swap.dir/libft/ft_strmapi.c.o	9283277c6a39b001
+2594	3101	1696853746960387923	CMakeFiles/push_swap.dir/libft/ft_split.c.o	10a4e0abe86748e
 2274	2682	1696853746547561290	CMakeFiles/push_swap.dir/libft/ft_putchar_fd.c.o	a91bb1d6a5957727
 1622	2092	1696853745950231218	CMakeFiles/push_swap.dir/libft/ft_free_str.c.o	8b8ae39840fdf534
 2796	3234	1696853747099950823	CMakeFiles/push_swap.dir/libft/ft_strjoin.c.o	ba42f19bce1167b2
@@ -37,14 +37,14 @@
 17	759	1697015390935287300	CMakeFiles/push_swap.dir/src/main.c.o	906f2d75595ac8e0
 2441	2796	1696853746662923350	CMakeFiles/push_swap.dir/libft/ft_putnbr_fd.c.o	99328e155215abcf
 417	773	1697006898564113297	CMakeFiles/push_swap.dir/src/sorting/sorting_under_5.c.o	1b6968914f81a876
-2971	3449	1696853747300497493	CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o	e7c6edb5420d6d10
 15	396	1697006898212023033	CMakeFiles/push_swap.dir/src/operation/push.c.o	591d68f1e16b2fcd
+2971	3449	1696853747300497493	CMakeFiles/push_swap.dir/libft/ft_strlcpy.c.o	e7c6edb5420d6d10
 452	723	1696853744565069178	CMakeFiles/push_swap.dir/src/ft_printf/s_c_p_d_i.c.o	243cd87e2d4db48f
 397	773	1697006898564389580	CMakeFiles/push_swap.dir/src/sorting/index.c.o	4c76d94f487e590f
 1635	2060	1696853745926805668	CMakeFiles/push_swap.dir/libft/ft_isalnum.c.o	3c71fa64d81f64f2
-6	296	1697006898110734370	CMakeFiles/push_swap.dir/src/init/free_utils.c.o	53020c764961b236
-299	673	1697006898472447189	CMakeFiles/push_swap.dir/src/operation/swap.c.o	961106ea4d9d79a0
 3234	3622	1696853747487729923	CMakeFiles/push_swap.dir/libft/ft_strnstr.c.o	57013c666a0d4ff4
+299	673	1697006898472447189	CMakeFiles/push_swap.dir/src/operation/swap.c.o	961106ea4d9d79a0
+6	296	1697006898110734370	CMakeFiles/push_swap.dir/src/init/free_utils.c.o	53020c764961b236
 3417	3661	1696853747526837793	CMakeFiles/push_swap.dir/libft/ft_substr.c.o	627e147354bcf390
 11	697	1697013364773349628	CMakeFiles/push_swap.dir/src/check/check.c.o	e776a65275112953
 411	738	1697006898556045612	CMakeFiles/push_swap.dir/src/sorting/sorting_more.c.o	eb481ebffe4b4e7

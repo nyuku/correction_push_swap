@@ -12,20 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-void	print_nodes(t_node **node, char c)
-{
-	t_node	*current;
-
-	current = *node;
-	ft_printf("Contenu de la liste %c: ", c);
-	while (current != NULL)
-	{
-		printf("%d ", current->data);
-		current = current->next;
-	}
-	printf("\n");
-}
-
 void	deal_with_args(t_pushswap *ps, char **av)
 {
 	if (ps->mono_arg != 0)

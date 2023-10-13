@@ -44,7 +44,7 @@ void	threesome(t_pushswap *ps, int sorting_for)
 			ps->head_a->next->next->index == (2 + sorting_for))
 	{
 		swap(&(ps->head_a), ps, 'a');
-		rotate_up(&(ps->head_a), ps, 'a');
+		rotate(&(ps->head_a), ps, 'a');
 	}
 	else if (ps->head_a->index == (2 + sorting_for) && \
 		ps->head_a->next->index == (1 + sorting_for) && \
@@ -60,7 +60,7 @@ void	threesome(t_pushswap *ps, int sorting_for)
 	else if (ps->head_a->index == (3 + sorting_for) && \
 		ps->head_a->next->index == (1 + sorting_for) && \
 		ps->head_a->next->next->index == (2 + sorting_for))
-		rotate_up(&(ps->head_a), ps, 'a');
+		rotate(&(ps->head_a), ps, 'a');
 	else
 		threesome_bis(ps, sorting_for);
 }
@@ -76,7 +76,7 @@ void	sorting_for(t_pushswap *ps, int five_sort)
 	{
 		while ((five_sort == 0 && ps->head_a->index != 1) \
 			|| (five_sort == 1 && ps->head_a->index != 2))
-			rotate_up(&ps->head_a, ps, 'a');
+			rotate(&ps->head_a, ps, 'a');
 	}
 	push(&(ps->head_a), &(ps->head_b), ps, 'b');
 	threesome(ps, 2);
