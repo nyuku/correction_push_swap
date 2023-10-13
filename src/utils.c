@@ -18,7 +18,7 @@ int	find_index(t_node *head, int target_index)
 	t_node	*current;
 
 	current = head;
-	i = 0;
+	i = 1;// change 0
 	while (current != NULL)
 	{
 		if (current->index == target_index)

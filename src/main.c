@@ -87,3 +87,42 @@ int	main(int ac, char **av)
 	free_structure(&ps);
 	return (0);
 }
+
+
+
+//
+//
+//int main(int ac, char **av) {
+//	t_pushswap ps;
+//	int min_operations = INT_MAX;
+//	int best_chunk_size = 0;
+//
+//	 // 500 chiffres + le nom du programme
+//		for (int chunk_size = 5; chunk_size <= 100; chunk_size += 5) {
+//			init_main(&ps, ac);
+//			check_all_arg(av, ac, &ps);
+//			deal_with_args(&ps, av);
+//			check_args_parsed(&ps);
+//			ps.nombre_op = 0;  // Réinitialisation du compteur d'opérations
+//
+//			big_sort(&ps, chunk_size);
+//
+//			if (ps.nombre_op < min_operations) {
+//				min_operations = ps.nombre_op;
+//				best_chunk_size = chunk_size;
+//			}
+//
+//			// Libération de la mémoire
+//			free_nodes(&(ps.head_a));
+//			free_nodes(&(ps.head_b));
+//			free_structure(&ps);
+//		}
+//
+//		// Écrire la meilleure option dans un fichier
+//		FILE *file = fopen("chunk_results.txt", "w");
+//		fprintf(file, "Meilleure taille de chunk: %d avec le plus petit nombre d'opérations: %d\n", best_chunk_size, min_operations);
+//		fclose(file);
+//
+//
+//	return 0;
+//}
