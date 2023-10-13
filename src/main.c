@@ -82,6 +82,7 @@ int	main(int ac, char **av)
 		big_sort(&ps);
 	else
 		small_sorting(&ps);
+	//print_nodes(&(ps.head_a), 'a');
 	free_nodes(&(ps.head_a));
 	free_nodes(&(ps.head_b));
 	free_structure(&ps);

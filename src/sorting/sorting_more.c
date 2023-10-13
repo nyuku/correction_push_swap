@@ -32,7 +32,7 @@ void push_b_chunks(t_pushswap *ps, int chunks, int round)
 	int i;
 	int limit;
 	// Align with Lolo's logic: condition for the external loop
-	while (list_size(ps->head_a) > chunks)  // Make sure this condition aligns with Lolo's
+	while (list_size(ps->head_a) > 0)  // > chunks
 	{
 		i = 1;
 		limit = round * chunks;
